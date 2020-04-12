@@ -16,8 +16,8 @@ public class Main {
 		double dollarPrice = scanner.nextDouble();
 		System.out.print("How many dollar will be bought? ");
 		double amount = scanner.nextDouble();
-		CurrencyConverter cc = new CurrencyConverter(amount, dollarPrice);
-		System.out.printf("Amount to be paid in reais = %.2f", cc.amoutToBePaid());
+		double result = CurrencyConverter.amoutToBePaid(amount, dollarPrice);
+		System.out.printf("Amount to be paid in reais = %.2f%n", result);
 		
 		scanner.close();
 	}

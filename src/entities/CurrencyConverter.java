@@ -2,17 +2,9 @@ package entities;
 
 public class CurrencyConverter {
 	
-	private static final Integer IOF = 6;
-	private double amount;
-	private double dollarPrice;
-		
-	public CurrencyConverter(double amount, double dollarPrice) {
-		this.amount = amount;
-		this.dollarPrice = dollarPrice;
-	}
+	private static final Double IOF = 0.06;
 	
-	public double amoutToBePaid() {
-		double valueWithoutTax = this.amount * this.dollarPrice;
-		return valueWithoutTax + valueWithoutTax * ((double)IOF / 100);
+	public static double amoutToBePaid(double amount, double dollarPrice) {
+		return amount * dollarPrice * (1.0 + IOF);
 	}
 }
